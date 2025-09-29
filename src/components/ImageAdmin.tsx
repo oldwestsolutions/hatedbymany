@@ -43,8 +43,8 @@ const ImageAdmin: React.FC = () => {
     setShowUpload(false)
   }
 
-  const copyImageUrl = (url: string) => {
-    navigator.clipboard.writeText(url)
+  const copyImageUrl = (imageUrl: string) => {
+    navigator.clipboard.writeText(imageUrl)
     alert('Image URL copied to clipboard!')
   }
 

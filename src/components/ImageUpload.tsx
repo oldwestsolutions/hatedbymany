@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react'
 import { motion } from 'framer-motion'
-import { Upload, X, Check, AlertCircle } from 'lucide-react'
+import { Upload, Check, AlertCircle } from 'lucide-react'
 import { ImageService } from '../services/imageService'
 
 interface ImageUploadProps {
