@@ -1,0 +1,81 @@
+<svg width="400" height="500" viewBox="0 0 400 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background - Dark Luxury -->
+  <rect width="400" height="500" fill="#0a0a0a"/>
+  <defs>
+    <linearGradient id="luxuryGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a1a;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#0d0d0d;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#000000;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="watchGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#2a2a2a;stop-opacity:0.8" />
+      <stop offset="70%" style="stop-color:#1a1a1a;stop-opacity:0.6" />
+      <stop offset="100%" style="stop-color:#0a0a0a;stop-opacity:0.3" />
+    </radialGradient>
+  </defs>
+  
+  <!-- Luxury Watch - Center Focus -->
+  <g transform="translate(200, 250)">
+    <!-- Watch Case - Platinum Dark -->
+    <ellipse cx="0" cy="0" rx="100" ry="120" fill="url(#luxuryGradient)" stroke="#333" stroke-width="2"/>
+    
+    <!-- Diamond Bezel -->
+    <ellipse cx="0" cy="0" rx="90" ry="110" fill="none" stroke="#444" stroke-width="3"/>
+    
+    <!-- Diamond Settings -->
+    <circle cx="0" cy="-90" r="4" fill="#666"/>
+    <circle cx="70" cy="-30" r="3" fill="#555"/>
+    <circle cx="0" cy="90" r="4" fill="#666"/>
+    <circle cx="-70" cy="-30" r="3" fill="#555"/>
+    <circle cx="70" cy="30" r="3" fill="#555"/>
+    <circle cx="-70" cy="30" r="3" fill="#555"/>
+    
+    <!-- Watch Face - Skeletonized -->
+    <ellipse cx="0" cy="0" rx="75" ry="95" fill="#0a0a0a" stroke="#333" stroke-width="1"/>
+    
+    <!-- Skeleton Movement -->
+    <circle cx="0" cy="0" r="60" fill="none" stroke="#444" stroke-width="1"/>
+    <circle cx="0" cy="0" r="40" fill="none" stroke="#555" stroke-width="1"/>
+    <circle cx="0" cy="0" r="20" fill="#111" stroke="#666" stroke-width="1"/>
+    
+    <!-- Tourbillon -->
+    <circle cx="0" cy="-20" r="15" fill="none" stroke="#666" stroke-width="1"/>
+    <circle cx="0" cy="-20" r="10" fill="#222" stroke="#777" stroke-width="1"/>
+    
+    <!-- Hour Markers - Gothic Style -->
+    <line x1="0" y1="-70" x2="0" y2="-60" stroke="#666" stroke-width="3"/>
+    <line x1="0" y1="60" x2="0" y2="70" stroke="#666" stroke-width="3"/>
+    <line x1="-60" y1="0" x2="-50" y2="0" stroke="#666" stroke-width="3"/>
+    <line x1="50" y1="0" x2="60" y2="0" stroke="#666" stroke-width="3"/>
+    
+    <!-- Crown -->
+    <rect x="85" y="-10" width="15" height="20" rx="3" fill="#1a1a1a" stroke="#333" stroke-width="1"/>
+    <rect x="88" y="-7" width="9" height="14" rx="2" fill="#333"/>
+    
+    <!-- Crown Guards -->
+    <rect x="80" y="-15" width="25" height="30" rx="5" fill="none" stroke="#333" stroke-width="1"/>
+  </g>
+  
+  <!-- Luxury Leather Strap -->
+  <rect x="50" y="350" width="300" height="60" fill="#0a0a0a" stroke="#222" stroke-width="1"/>
+  <rect x="50" y="350" width="300" height="15" fill="#111"/>
+  <rect x="50" y="395" width="300" height="15" fill="#111"/>
+  
+  <!-- Stitching -->
+  <line x1="60" y1="360" x2="340" y2="360" stroke="#333" stroke-width="1"/>
+  <line x1="60" y1="390" x2="340" y2="390" stroke="#333" stroke-width="1"/>
+  
+  <!-- Buckle -->
+  <rect x="170" y="370" width="60" height="20" rx="3" fill="#1a1a1a" stroke="#333" stroke-width="1"/>
+  <rect x="175" y="375" width="50" height="10" rx="2" fill="#333"/>
+  
+  <!-- Luxury Branding -->
+  <text x="200" y="50" text-anchor="middle" fill="#666" font-family="serif" font-size="16" font-weight="300">HBM</text>
+  <text x="200" y="70" text-anchor="middle" fill="#444" font-family="serif" font-size="10" font-weight="300">HATED BY MANY</text>
+  
+  <!-- Product Name -->
+  <text x="200" y="480" text-anchor="middle" fill="#888" font-family="serif" font-size="14" font-weight="400">DARK SOVEREIGN</text>
+  
+  <!-- Glow Effect -->
+  <ellipse cx="200" cy="250" rx="150" ry="180" fill="url(#watchGlow)"/>
+</svg>

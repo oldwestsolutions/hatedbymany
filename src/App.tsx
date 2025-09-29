@@ -7,8 +7,11 @@ import About from './components/About'
 import Footer from './components/Footer'
 import AboutUs from './pages/AboutUs'
 import OurStory from './pages/OurStory'
-import Craftsmanship from './pages/Craftsmanship'
 import Awards from './pages/Awards'
+import Careers from './pages/Careers'
+import Partners from './pages/Partners'
+import LearnMore from './pages/LearnMore'
+import Collections from './pages/Collections'
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home')
@@ -57,10 +60,16 @@ function App() {
         return <AboutUs />
       case 'our-story':
         return <OurStory />
-      case 'craftsmanship':
-        return <Craftsmanship />
+      case 'partners':
+        return <Partners />
       case 'awards':
         return <Awards />
+      case 'careers':
+        return <Careers />
+      case 'learn-more':
+        return <LearnMore />
+      case 'collections':
+        return <Collections />
       case 'home':
       default:
         return (

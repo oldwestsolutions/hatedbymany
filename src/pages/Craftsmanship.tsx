@@ -213,7 +213,7 @@ const Craftsmanship: React.FC = () => {
             className="text-center"
           >
             <h2 className="text-3xl font-luxury font-light text-white mb-8">
-              Luxury Heritage
+              Heritage
             </h2>
             <div className="max-w-4xl mx-auto">
               <p className="text-lg text-gray-400 leading-relaxed">

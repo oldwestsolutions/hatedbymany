@@ -45,7 +45,7 @@ const Header: React.FC = () => {
       }`}
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-14 sm:h-16">
           {/* Logo - Minimalist */}
           <motion.a
             href="/"
@@ -57,7 +57,7 @@ const Header: React.FC = () => {
               window.dispatchEvent(new PopStateEvent('popstate'))
             }}
           >
-            <span className="text-2xl font-gothic font-light tracking-wider text-white">
+            <span className="text-xl sm:text-2xl font-gothic font-light tracking-wider text-white">
               HBM
             </span>
           </motion.a>
@@ -66,10 +66,11 @@ const Header: React.FC = () => {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="flex items-center space-x-2 px-4 py-2 bg-white text-black font-medium text-sm tracking-wider uppercase hover:bg-gray-100 transition-all duration-300"
+            className="flex items-center space-x-1 sm:space-x-2 px-3 sm:px-4 py-2 bg-white text-black font-medium text-xs sm:text-sm tracking-wider uppercase hover:bg-gray-100 transition-all duration-300"
           >
-            <Download className="h-4 w-4" />
-            <span>Download App</span>
+            <Download className="h-3 w-3 sm:h-4 sm:w-4" />
+            <span className="hidden sm:inline">Download App</span>
+            <span className="sm:hidden">Download</span>
           </motion.button>
 
         </div>

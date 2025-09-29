@@ -18,16 +18,14 @@ const Hero: React.FC = () => {
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="flex items-center justify-center lg:justify-end"
+            className="flex items-center justify-center lg:justify-end order-2 lg:order-1"
           >
-            <div className="w-full max-w-sm h-96 bg-gray-900 border border-gray-800 flex items-center justify-center">
-              <div className="text-center space-y-4">
-                <div className="w-16 h-16 border border-white/30 flex items-center justify-center mx-auto">
-                  <div className="w-8 h-8 bg-white/20"></div>
-                </div>
-                <p className="text-white/60 text-sm">Image Placeholder</p>
-                <p className="text-white/40 text-xs">Add your luxury product image here</p>
-              </div>
+            <div className="w-full max-w-sm sm:max-w-md lg:max-w-xl h-64 sm:h-80 lg:h-96 overflow-hidden">
+              <img 
+                src="/walletcartoon.png" 
+                alt="Digital Wallet and Cryptocurrency" 
+                className="w-full h-full object-contain"
+              />
             </div>
           </motion.div>
 
@@ -36,42 +34,44 @@ const Hero: React.FC = () => {
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="flex flex-col justify-center space-y-12 text-center lg:text-left lg:pl-4"
+            className="flex flex-col justify-center space-y-8 sm:space-y-12 text-center lg:text-left lg:pl-4 order-1 lg:order-2"
           >
             {/* Main Title - Minimalist */}
-            <div className="space-y-6">
-              <h1 className="text-6xl md:text-8xl font-gothic font-light tracking-wider text-white">
+            <div className="space-y-4 sm:space-y-6">
+              <h1 className="text-4xl sm:text-6xl md:text-8xl font-gothic font-light tracking-wider text-white">
                 HBM
               </h1>
               
-              <div className="w-24 h-px bg-white lg:mx-0 mx-auto"></div>
+              <div className="w-16 sm:w-24 h-px bg-white lg:mx-0 mx-auto"></div>
             </div>
 
             {/* Subtitle - Professional */}
-            <div className="space-y-6">
-              <h2 className="text-2xl md:text-3xl font-luxury font-light text-white leading-tight">
-                Luxury Timepieces & Leather Goods
+            <div className="space-y-4 sm:space-y-6">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-luxury font-light text-white leading-tight">
+                Non-Custodial Digital Wallet
               </h2>
-              <p className="text-lg text-gray-400 leading-relaxed max-w-lg">
-                Where luxury craftsmanship meets contemporary design. 
-                Each piece represents the pinnacle of luxury and precision.
+              <p className="text-base sm:text-lg text-gray-400 leading-relaxed max-w-lg mx-auto lg:mx-0">
+                Secure, private, and fully decentralized. 
+                Your keys, your crypto, your control.
               </p>
             </div>
 
             {/* CTA Buttons - Refined */}
-            <div className="flex flex-col sm:flex-row gap-6 lg:justify-start justify-center">
-              <motion.button
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 lg:justify-start justify-center">
+              <motion.a
+                href="/collections"
                 whileHover={{ opacity: 0.8 }}
-                className="px-12 py-4 bg-white text-black font-medium text-sm tracking-wider uppercase hover:bg-gray-100 transition-all duration-300"
+                className="px-8 sm:px-12 py-3 sm:py-4 bg-white text-black font-medium text-sm tracking-wider uppercase hover:bg-gray-100 transition-all duration-300 inline-block text-center"
               >
                 View Collection
-              </motion.button>
-              <motion.button
+              </motion.a>
+              <motion.a
+                href="/learn-more"
                 whileHover={{ opacity: 0.8 }}
-                className="px-12 py-4 border border-white text-white font-medium text-sm tracking-wider uppercase hover:bg-white hover:text-black transition-all duration-300"
+                className="px-8 sm:px-12 py-3 sm:py-4 border border-white text-white font-medium text-sm tracking-wider uppercase hover:bg-white hover:text-black transition-all duration-300 inline-block text-center"
               >
                 Learn More
-              </motion.button>
+              </motion.a>
             </div>
           </motion.div>
         </div>
