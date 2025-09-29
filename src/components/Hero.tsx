@@ -22,9 +22,9 @@ const Hero: React.FC = () => {
           >
             <div className="w-full max-w-sm sm:max-w-md lg:max-w-xl h-64 sm:h-80 lg:h-96 overflow-hidden">
               <img 
-                src="/walletcartoon.png" 
-                alt="Digital Wallet and Cryptocurrency" 
-                className="w-full h-full object-contain"
+                src="/smartwatch-hero.jpg" 
+                alt="HBM Modern Smartwatch - High-Tech Digital Innovation" 
+                className="w-full h-full object-cover"
               />
             </div>
           </motion.div>

@@ -12,6 +12,8 @@ import Careers from './pages/Careers'
 import Partners from './pages/Partners'
 import LearnMore from './pages/LearnMore'
 import Collections from './pages/Collections'
+import Solutions from './pages/Solutions'
+import CustomerService from './pages/CustomerService'
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home')
@@ -70,6 +72,10 @@ function App() {
         return <LearnMore />
       case 'collections':
         return <Collections />
+      case 'solutions':
+        return <Solutions />
+      case 'customer-service':
+        return <CustomerService />
       case 'home':
       default:
         return (

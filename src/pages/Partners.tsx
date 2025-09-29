@@ -72,28 +72,6 @@ const Partners: React.FC = () => {
     }
   ]
 
-  const stats = [
-    {
-      title: 'Total Companies',
-      value: '6',
-      description: 'Diverse portfolio of luxury and technology businesses'
-    },
-    {
-      title: 'Combined Revenue',
-      value: '$150M+',
-      description: 'Annual revenue across all partner companies'
-    },
-    {
-      title: 'Global Employees',
-      value: '540+',
-      description: 'Talented professionals across all divisions'
-    },
-    {
-      title: 'Years Combined',
-      value: '15+',
-      description: 'Total years of industry experience'
-    }
-  ]
 
   const values = [
     {
@@ -139,31 +117,6 @@ const Partners: React.FC = () => {
             </p>
           </motion.div>
 
-          {/* Stats Section */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-20"
-          >
-            {stats.map((stat, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="text-4xl font-gothic font-light text-white mb-2">
-                  {stat.value}
-                </div>
-                <div className="text-gray-400 text-sm mb-1">{stat.title}</div>
-                <div className="text-gray-500 text-xs">{stat.description}</div>
-              </motion.div>
-            ))}
-          </motion.div>
 
           {/* Partners Grid */}
           <motion.div
