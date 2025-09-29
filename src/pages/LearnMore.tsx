@@ -1,6 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { Shield, Lock, Key, Globe, Zap, Heart, Star, CheckCircle, ArrowRight } from 'lucide-react'
+import { Shield, Lock, Globe, Zap, CheckCircle } from 'lucide-react'
 
 const LearnMore: React.FC = () => {
   const features = [

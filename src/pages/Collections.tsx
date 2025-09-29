@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
-import { Star, Award, Crown, Shield, Zap, Heart, Filter, Search } from 'lucide-react'
+import { Star, Award, Crown, Shield, Search } from 'lucide-react'
 
 const Collections: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState('all')

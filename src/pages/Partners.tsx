@@ -1,6 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { Building2, Globe, Shield, Zap, Heart, Target, Award, Users, Clock, Star } from 'lucide-react'
+import { Building2, Globe, Shield, Zap, Target, Award, Users, Star } from 'lucide-react'
 
 const Partners: React.FC = () => {
   const partners = [

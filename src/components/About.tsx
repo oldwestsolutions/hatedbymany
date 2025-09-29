@@ -1,6 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { Crown, Shield, Star, MapPin, Hammer, Clock } from 'lucide-react'
+import { Crown, MapPin, Hammer, Clock } from 'lucide-react'
 
 const About: React.FC = () => {
 

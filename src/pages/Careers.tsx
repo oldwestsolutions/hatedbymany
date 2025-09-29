@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from 'react'
 import { motion } from 'framer-motion'
-import { Briefcase, Users, Target, Award, Heart, Globe, Clock, MapPin, DollarSign, Shield, Zap, BookOpen, Star, CheckCircle, ArrowRight, Search, Filter, Code, Palette, Database, Monitor } from 'lucide-react'
+import { Users, Target, Award, Heart, Globe, Clock, MapPin, DollarSign, Shield, Zap, BookOpen, Star, CheckCircle, Search, Filter, Code, Palette, Database, Monitor } from 'lucide-react'
 
 const Careers: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('')
