@@ -8,7 +8,7 @@ const About: React.FC = () => {
     {
       icon: Crown,
       title: 'Luxury Heritage',
-      description: 'Drawing inspiration from Belarusian royal traditions and Gothic architectural mastery.'
+      description: 'Drawing inspiration from royal traditions and Gothic architectural mastery.'
     },
     {
       icon: Shield,
@@ -38,7 +38,7 @@ const About: React.FC = () => {
           </h2>
           <div className="w-16 h-px bg-luxury-gold mx-auto mb-8"></div>
           <p className="text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed">
-            Where Belarusian heritage meets contemporary design in the world of luxury timepieces and leather goods.
+            Where luxury heritage meets contemporary design in the world of luxury timepieces and leather goods.
           </p>
         </motion.div>
 
@@ -56,13 +56,13 @@ const About: React.FC = () => {
                 A Legacy of Excellence
               </h3>
               <p className="text-gray-400 leading-relaxed">
-                Founded in the heart of Minsk, HBM represents the perfect fusion of Belarusian 
-                craftsmanship and contemporary design. Our master artisans have dedicated their lives 
+                Founded with a vision of excellence, HBM represents the perfect fusion of
+                craftsmanship and contemporary design. Our master artisans have dedicated their lives
                 to creating timepieces and leather goods that transcend mere luxury.
               </p>
               <p className="text-gray-400 leading-relaxed">
                 Each piece tells a story of heritage, precision, and uncompromising quality. 
-                From the intricate engravings inspired by Belarusian folk art to the refined 
+                From the intricate engravings inspired by traditional art to the refined 
                 design elements, every detail is meticulously crafted.
               </p>
             </div>
@@ -126,7 +126,7 @@ const About: React.FC = () => {
               className="mt-8 flex items-center justify-center space-x-2 text-gray-400"
             >
               <MapPin className="h-4 w-4" />
-              <span className="text-sm font-light">Minsk, Belarus</span>
+                <span className="text-sm font-light">Global Headquarters</span>
             </motion.div>
           </motion.div>
         </div>

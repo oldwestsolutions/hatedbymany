@@ -1,6 +1,7 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
-import { Clock, Briefcase } from 'lucide-react'
+import { Clock, Briefcase, Settings, X } from 'lucide-react'
+import { ImageService } from '../services/imageService'
 
 interface Product {
   id: number
@@ -16,6 +17,21 @@ interface Product {
 
 const Products: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState<'all' | 'watches' | 'leather'>('all')
+  const [availableImages, setAvailableImages] = useState<string[]>([])
+  const [showImageManager, setShowImageManager] = useState(false)
+
+  // Fetch available images on component mount
+  useEffect(() => {
+    const fetchImages = async () => {
+      try {
+        const response = await ImageService.getImages()
+        setAvailableImages(response.images.map(img => img.url))
+      } catch (error) {
+        console.error('Failed to fetch images:', error)
+      }
+    }
+    fetchImages()
+  }, [])
 
   const products: Product[] = [
     {
@@ -23,7 +39,7 @@ const Products: React.FC = () => {
       name: 'Gothic Sovereign',
       category: 'watch',
       price: '$12,500',
-      image: '/api/placeholder/400/500',
+      image: availableImages[0] || '/api/placeholder/400/500',
       description: 'A masterpiece of horological art, featuring a skeletonized movement visible through the transparent case back.',
       features: ['Swiss Movement', 'Sapphire Crystal', 'Limited Edition'],
       isNew: true,
@@ -31,11 +47,11 @@ const Products: React.FC = () => {
     },
     {
       id: 2,
-      name: 'Belarusian Heritage',
+      name: 'Heritage Collection',
       category: 'watch',
       price: '$8,900',
-      image: '/api/placeholder/400/500',
-      description: 'Inspired by Belarusian architectural motifs, this timepiece combines traditional craftsmanship with modern precision.',
+      image: availableImages[0] || '/api/placeholder/400/500',
+      description: 'Inspired by classical architectural motifs, this timepiece combines traditional craftsmanship with modern precision.',
       features: ['Hand-Engraved Case', 'Leather Strap', 'Water Resistant'],
       isLimited: true
     },
@@ -44,8 +60,8 @@ const Products: React.FC = () => {
       name: 'Midnight Executive',
       category: 'leather',
       price: '$2,800',
-      image: '/api/placeholder/400/500',
-      description: 'Premium Italian leather briefcase with Gothic-inspired hardware and Belarusian red accent stitching.',
+      image: availableImages[0] || '/api/placeholder/400/500',
+      description: 'Premium Italian leather briefcase with Gothic-inspired hardware and luxury red accent stitching.',
       features: ['Italian Leather', 'Hand-Stitched', 'Lifetime Warranty'],
       isNew: true
     },
@@ -54,7 +70,7 @@ const Products: React.FC = () => {
       name: 'Crimson Crown',
       category: 'leather',
       price: '$1,950',
-      image: '/api/placeholder/400/500',
+      image: availableImages[0] || '/api/placeholder/400/500',
       description: 'Elegant leather wallet featuring Gothic cross embossing and luxury gold hardware.',
       features: ['Premium Leather', 'RFID Protection', 'Handcrafted'],
     },
@@ -63,18 +79,18 @@ const Products: React.FC = () => {
       name: 'Dark Sovereign',
       category: 'watch',
       price: '$15,200',
-      image: '/api/placeholder/400/500',
+      image: availableImages[0] || '/api/placeholder/400/500',
       description: 'The pinnacle of luxury timekeeping, featuring a tourbillon movement and diamond-set bezel.',
       features: ['Tourbillon Movement', 'Diamond Bezel', 'Platinum Case'],
       isLimited: true
     },
     {
       id: 6,
-      name: 'Belarusian Traveler',
+      name: 'Luxury Traveler',
       category: 'leather',
       price: '$3,200',
-      image: '/api/placeholder/400/500',
-      description: 'Spacious leather travel bag with traditional Belarusian patterns and modern functionality.',
+      image: availableImages[0] || '/api/placeholder/400/500',
+      description: 'Spacious leather travel bag with traditional luxury patterns and modern functionality.',
       features: ['Expandable Design', 'Multiple Compartments', 'Premium Hardware'],
     }
   ]
@@ -91,27 +107,36 @@ const Products: React.FC = () => {
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
           className="text-center mb-20"
         >
-          <h2 className="text-4xl md:text-5xl font-gothic font-light text-white mb-6">
-            Collection
-          </h2>
+          <div className="flex justify-center items-center mb-6">
+            <h2 className="text-4xl md:text-5xl font-gothic font-light text-white">
+              Collection
+            </h2>
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={() => setShowImageManager(true)}
+              className="ml-4 p-2 border border-white/30 hover:border-white/60 transition-colors"
+              title="Manage Images"
+            >
+              <Settings className="h-5 w-5 text-white" />
+            </motion.button>
+          </div>
           <div className="w-16 h-px bg-white mx-auto mb-8"></div>
           <p className="text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed">
             Meticulously crafted timepieces and leather goods that embody the perfect fusion 
-            of Belarusian heritage and contemporary design.
+            of luxury heritage and contemporary design.
           </p>
         </motion.div>
 
         {/* Category Filter - Minimalist */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          viewport={{ once: true }}
           className="flex justify-center mb-16"
         >
           <div className="flex space-x-8">
@@ -139,30 +164,48 @@ const Products: React.FC = () => {
         </motion.div>
 
         {/* Products Grid */}
-        <motion.div
-          layout
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-        >
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredProducts.map((product, index) => (
             <motion.div
               key={product.id}
-              layout
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              viewport={{ once: true }}
-              whileHover={{ y: -5 }}
-              className="group bg-black overflow-hidden border border-gray-800/20 hover:border-white/30 transition-all duration-500"
+              initial={{ opacity: 0, y: 50, scale: 0.9 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{ 
+                duration: 0.6, 
+                delay: index * 0.15,
+                ease: "easeOut"
+              }}
+              whileHover={{ 
+                y: -8, 
+                scale: 1.02,
+                transition: { duration: 0.3 }
+              }}
+              whileTap={{ scale: 0.98 }}
+              className="group bg-black overflow-hidden border border-gray-800/20 hover:border-white/30 transition-all duration-500 hover:shadow-2xl hover:shadow-white/10"
             >
-              {/* Product Image - Clean */}
-              <div className="relative h-80 bg-gray-900 flex items-center justify-center">
-                <div className="w-24 h-24 border border-white/30 flex items-center justify-center">
-                  {product.category === 'watch' ? (
-                    <Clock className="h-12 w-12 text-white" />
-                  ) : (
-                    <Briefcase className="h-12 w-12 text-white" />
-                  )}
-                </div>
+              {/* Product Image - Enhanced */}
+              <div className="relative h-80 bg-gray-900 flex items-center justify-center overflow-hidden">
+                {product.image && product.image !== '/api/placeholder/400/500' ? (
+                  <motion.img
+                    src={product.image}
+                    alt={product.name}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                    whileHover={{ scale: 1.1 }}
+                    transition={{ duration: 0.6 }}
+                  />
+                ) : (
+                  <motion.div 
+                    className="w-24 h-24 border border-white/30 flex items-center justify-center"
+                    whileHover={{ scale: 1.1, rotate: 5 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    {product.category === 'watch' ? (
+                      <Clock className="h-12 w-12 text-white" />
+                    ) : (
+                      <Briefcase className="h-12 w-12 text-white" />
+                    )}
+                  </motion.div>
+                )}
                 
                 {/* Badges - Minimalist */}
                 <div className="absolute top-6 left-6 flex flex-col space-y-2">
@@ -212,14 +255,13 @@ const Products: React.FC = () => {
               </div>
             </motion.div>
           ))}
-        </motion.div>
+        </div>
 
         {/* View All Button - Minimalist */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          viewport={{ once: true }}
           className="text-center mt-16"
         >
           <motion.button
@@ -230,6 +272,72 @@ const Products: React.FC = () => {
           </motion.button>
         </motion.div>
       </div>
+
+      {/* Image Manager Modal */}
+      {showImageManager && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          className="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-4"
+          onClick={() => setShowImageManager(false)}
+        >
+          <motion.div
+            initial={{ scale: 0.8, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            exit={{ scale: 0.8, opacity: 0 }}
+            className="bg-gray-900 rounded-lg max-w-4xl w-full max-h-[80vh] overflow-hidden"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="p-6 border-b border-gray-800">
+              <div className="flex justify-between items-center">
+                <h3 className="text-xl font-medium">Manage Product Images</h3>
+                <button
+                  onClick={() => setShowImageManager(false)}
+                  className="text-gray-400 hover:text-white"
+                >
+                  <X className="h-6 w-6" />
+                </button>
+              </div>
+            </div>
+            <div className="p-6 max-h-[60vh] overflow-y-auto">
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                {availableImages.map((imageUrl, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ delay: index * 0.1 }}
+                    className="relative group cursor-pointer"
+                    onClick={() => {
+                      // Update product images with selected image
+                      console.log('Selected image:', imageUrl)
+                      setShowImageManager(false)
+                    }}
+                  >
+                    <img
+                      src={imageUrl}
+                      alt={`Product image ${index + 1}`}
+                      className="w-full h-32 object-cover rounded-lg border border-gray-700 group-hover:border-white transition-colors"
+                    />
+                    <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 rounded-lg flex items-center justify-center">
+                      <span className="opacity-0 group-hover:opacity-100 text-white text-sm font-medium">
+                        Use Image
+                      </span>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+              {availableImages.length === 0 && (
+                <div className="text-center py-12">
+                  <p className="text-gray-400 mb-4">No images available</p>
+                  <p className="text-sm text-gray-500">Upload images through the admin panel</p>
+                </div>
+              )}
+            </div>
+          </motion.div>
+        </motion.div>
+      )}
     </section>
   )
 }

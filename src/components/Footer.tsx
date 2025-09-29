@@ -62,7 +62,7 @@ const Footer: React.FC = () => {
                 </span>
               </div>
               <p className="text-gray-400 mb-8 leading-relaxed text-sm">
-                Where Belarusian heritage meets contemporary design in the world of luxury 
+                Where luxury heritage meets contemporary design in the world of luxury 
                 timepieces and premium leather goods.
               </p>
               
@@ -70,7 +70,7 @@ const Footer: React.FC = () => {
               <div className="space-y-4">
                 <div className="flex items-center space-x-3 text-gray-400">
                   <MapPin className="h-4 w-4 text-luxury-gold" />
-                  <span className="text-sm">Minsk, Belarus</span>
+                  <span className="text-sm">Global Headquarters</span>
                 </div>
                 <div className="flex items-center space-x-3 text-gray-400">
                   <Phone className="h-4 w-4 text-luxury-gold" />
@@ -160,7 +160,7 @@ const Footer: React.FC = () => {
             <div className="text-gray-500 text-center md:text-left">
               <p className="text-sm">&copy; {currentYear} HBM Luxury. All rights reserved.</p>
               <p className="text-xs mt-1 text-gray-600">
-                Crafted with passion in Belarus
+                Crafted with passion worldwide
               </p>
             </div>
 

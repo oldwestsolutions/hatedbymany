@@ -17,7 +17,7 @@ const Awards: React.FC = () => {
       title: 'Craftsmanship Award',
       organization: 'Baselworld Watch Fair',
       category: 'Traditional Techniques',
-      description: 'Honoring traditional Belarusian craftsmanship methods',
+      description: 'Honoring traditional craftsmanship methods',
       icon: Trophy
     },
     {
@@ -39,9 +39,9 @@ const Awards: React.FC = () => {
     {
       year: '2019',
       title: 'Master Craftsman Recognition',
-      organization: 'Belarusian Artisan Guild',
+      organization: 'Luxury Artisan Guild',
       category: 'Traditional Skills',
-      description: 'Preserving and promoting traditional Belarusian techniques',
+      description: 'Preserving and promoting traditional techniques',
       icon: Crown
     },
     {
@@ -75,7 +75,7 @@ const Awards: React.FC = () => {
   const recognition = [
     {
       title: 'Featured in',
-      items: ['Luxury Watch Magazine', 'International Design Review', 'Belarusian Heritage Journal']
+      items: ['Luxury Watch Magazine', 'International Design Review', 'Luxury Heritage Journal']
     },
     {
       title: 'Exhibited at',
@@ -83,7 +83,7 @@ const Awards: React.FC = () => {
     },
     {
       title: 'Recognized by',
-      items: ['Belarusian Ministry of Culture', 'International Luxury Association', 'European Craft Council']
+      items: ['Ministry of Culture', 'International Luxury Association', 'European Craft Council']
     }
   ]
 

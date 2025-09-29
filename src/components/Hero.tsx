@@ -11,16 +11,16 @@ const Hero: React.FC = () => {
       <div className="absolute inset-0 bg-gradient-to-b from-black via-black to-gray-900 opacity-80"></div>
 
       <div className="relative z-10 w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center min-h-screen">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center min-h-screen">
           
           {/* Left Column - Image Placeholder */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="flex items-center justify-center lg:justify-start"
+            className="flex items-center justify-center lg:justify-end"
           >
-            <div className="w-full max-w-md h-96 bg-gray-900 border border-gray-800 flex items-center justify-center">
+            <div className="w-full max-w-sm h-96 bg-gray-900 border border-gray-800 flex items-center justify-center">
               <div className="text-center space-y-4">
                 <div className="w-16 h-16 border border-white/30 flex items-center justify-center mx-auto">
                   <div className="w-8 h-8 bg-white/20"></div>
@@ -36,7 +36,7 @@ const Hero: React.FC = () => {
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="flex flex-col justify-center space-y-12 text-center lg:text-left"
+            className="flex flex-col justify-center space-y-12 text-center lg:text-left lg:pl-4"
           >
             {/* Main Title - Minimalist */}
             <div className="space-y-6">
@@ -53,7 +53,7 @@ const Hero: React.FC = () => {
                 Luxury Timepieces & Leather Goods
               </h2>
               <p className="text-lg text-gray-400 leading-relaxed max-w-lg">
-                Where Belarusian craftsmanship meets contemporary design. 
+                Where luxury craftsmanship meets contemporary design. 
                 Each piece represents the pinnacle of luxury and precision.
               </p>
             </div>

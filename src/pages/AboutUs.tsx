@@ -17,7 +17,7 @@ const AboutUs: React.FC = () => {
     {
       name: 'Dmitri Kozlov',
       role: 'Design Director',
-      description: 'Contemporary design meets traditional Belarusian heritage'
+      description: 'Contemporary design meets traditional luxury heritage'
     }
   ]
 
@@ -73,15 +73,15 @@ const AboutUs: React.FC = () => {
                 Our Foundation
               </h2>
               <p className="text-gray-400 leading-relaxed">
-                Founded in the heart of Minsk, HBM represents the perfect fusion of Belarusian 
+                Founded with a vision of excellence, HBM represents the perfect fusion of 
                 craftsmanship and contemporary luxury. Our journey began with a simple vision: 
                 to create timepieces and leather goods that honor traditional techniques while 
                 embracing modern design.
               </p>
               <p className="text-gray-400 leading-relaxed">
                 Each piece in our collection tells a story of heritage, precision, and 
-                uncompromising quality. From the intricate engravings inspired by Belarusian 
-                folk art to the refined design elements, every detail is meticulously crafted 
+                uncompromising quality.                 From the intricate engravings inspired by traditional 
+                art to the refined design elements, every detail is meticulously crafted
                 by our master artisans.
               </p>
             </motion.div>

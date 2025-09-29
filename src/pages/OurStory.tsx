@@ -7,7 +7,7 @@ const OurStory: React.FC = () => {
     {
       year: '1998',
       title: 'The Beginning',
-      description: 'Alexander Volkov establishes HBM in a small workshop in Minsk, focusing on traditional Belarusian craftsmanship.'
+      description: 'Alexander Volkov establishes HBM in a small workshop, focusing on traditional craftsmanship.'
     },
     {
       year: '2005',
@@ -22,7 +22,7 @@ const OurStory: React.FC = () => {
     {
       year: '2018',
       title: 'Global Presence',
-      description: 'HBM opens flagship stores in major cities worldwide, bringing Belarusian luxury to international markets.'
+      description: 'HBM opens flagship stores in major cities worldwide, bringing luxury to international markets.'
     },
     {
       year: '2024',
@@ -65,7 +65,7 @@ const OurStory: React.FC = () => {
             </h1>
             <div className="w-16 h-px bg-white mx-auto mb-8"></div>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
-              From a small workshop in Minsk to a global luxury brand, discover the journey 
+              From a small workshop to a global luxury brand, discover the journey 
               that shaped HBM into the prestigious name it is today.
             </p>
           </motion.div>
@@ -163,17 +163,17 @@ const OurStory: React.FC = () => {
             className="text-center"
           >
             <h2 className="text-3xl font-luxury font-light text-white mb-8">
-              Belarusian Heritage
+              Luxury Heritage
             </h2>
             <div className="max-w-4xl mx-auto">
               <p className="text-lg text-gray-400 leading-relaxed mb-8">
-                Our story is deeply rooted in Belarusian culture and tradition. From the intricate 
-                patterns inspired by folk art to the meticulous attention to detail passed down 
-                through generations, every HBM piece carries the soul of Belarusian craftsmanship.
+                Our story is deeply rooted in luxury culture and tradition. From the intricate 
+                patterns inspired by traditional art to the meticulous attention to detail passed down 
+                through generations, every HBM piece carries the soul of master craftsmanship.
               </p>
               <div className="flex items-center justify-center space-x-2 text-gray-400">
                 <MapPin className="h-5 w-5" />
-                <span className="text-sm">Proudly crafted in Minsk, Belarus</span>
+                <span className="text-sm">Proudly crafted worldwide</span>
               </div>
             </div>
           </motion.div>

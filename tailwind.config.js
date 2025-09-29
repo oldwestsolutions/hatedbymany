@@ -12,7 +12,7 @@ export default {
         'luxury-dark': '#1A1A1A',
         'luxury-gray': '#2A2A2A',
         'gothic-red': '#FFFFFF',
-        'belarusian-blue': '#FFFFFF',
+        'luxury-blue': '#FFFFFF',
       },
       fontFamily: {
         'gothic': ['Cinzel', 'serif'],

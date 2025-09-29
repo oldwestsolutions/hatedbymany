@@ -7,7 +7,7 @@ const Craftsmanship: React.FC = () => {
     {
       step: '01',
       title: 'Design & Planning',
-      description: 'Each piece begins with meticulous design, drawing inspiration from Belarusian heritage and contemporary aesthetics.',
+      description: 'Each piece begins with meticulous design, drawing inspiration from luxury heritage and contemporary aesthetics.',
       icon: Star
     },
     {
@@ -33,7 +33,7 @@ const Craftsmanship: React.FC = () => {
   const techniques = [
     {
       title: 'Traditional Engraving',
-      description: 'Hand-engraved details inspired by Belarusian folk art patterns',
+      description: 'Hand-engraved details inspired by traditional art patterns',
       image: 'Engraving Process'
     },
     {
@@ -52,7 +52,7 @@ const Craftsmanship: React.FC = () => {
     {
       name: 'Master Engraver',
       experience: '25+ Years',
-      specialty: 'Traditional Belarusian Patterns'
+      specialty: 'Traditional Luxury Patterns'
     },
     {
       name: 'Leather Craftsman',
@@ -213,13 +213,13 @@ const Craftsmanship: React.FC = () => {
             className="text-center"
           >
             <h2 className="text-3xl font-luxury font-light text-white mb-8">
-              Belarusian Heritage
+              Luxury Heritage
             </h2>
             <div className="max-w-4xl mx-auto">
               <p className="text-lg text-gray-400 leading-relaxed">
-                Our craftsmanship is deeply rooted in Belarusian tradition, with techniques 
+                Our craftsmanship is deeply rooted in luxury tradition, with techniques 
                 passed down through generations. Each piece honors the rich cultural heritage 
-                of Belarus while embracing contemporary design principles.
+                of master artisans while embracing contemporary design principles.
               </p>
             </div>
           </motion.div>
