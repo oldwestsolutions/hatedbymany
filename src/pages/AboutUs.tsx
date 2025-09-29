@@ -1,6 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { Crown, Shield, Star, MapPin, Users, Award } from 'lucide-react'
+import { Crown, Shield, Star, Users } from 'lucide-react'
 
 const AboutUs: React.FC = () => {
   const teamMembers = [

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
-import { Clock, Briefcase, Star, Eye, ShoppingCart } from 'lucide-react'
+import { Clock, Briefcase, ShoppingCart } from 'lucide-react'
 
 interface Product {
   id: number
