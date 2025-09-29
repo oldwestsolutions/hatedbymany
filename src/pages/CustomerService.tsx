@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
-import { Mail, Phone, MessageCircle, Clock, Shield, Award, Headphones, HelpCircle, X, Send } from 'lucide-react'
+import { Mail, Phone, MessageCircle, X, Send } from 'lucide-react'
 
 const CustomerService: React.FC = () => {
   const [isChatOpen, setIsChatOpen] = useState(false)
