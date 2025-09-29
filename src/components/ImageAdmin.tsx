@@ -39,6 +39,7 @@ const ImageAdmin: React.FC = () => {
   }
 
   const handleImageUploaded = (imageUrl: string) => {
+    console.log('Image uploaded:', imageUrl)
     fetchImages() // Refresh the list
     setShowUpload(false)
   }
